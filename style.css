@@ -31,7 +31,7 @@ body {
     text-align: center;
     display: none; /* Hidden by default */
     position: relative;
-    height: 90vh;
+    height: 35em;
 }
 
 .container.active {
@@ -139,6 +139,9 @@ button.active {
 
 /* Media Queries for Responsive Design */
 @media screen and (max-width: 1320px) {
+    .container{
+        width: 30em;
+    }
     input {
         padding: 1em;
         margin: .5em
