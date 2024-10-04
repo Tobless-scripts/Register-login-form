@@ -1,0 +1,205 @@
+/* Reset and Global Styles */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(195, 155, 231, 0.664);
+}
+
+.owner {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.container {
+    background-color: rgba(241, 244, 247, 0.74);
+    backdrop-filter: blur(50px);
+    border: 3px solid white;
+    border-radius: 2em;
+    width: 40vw;
+    padding: 2em;
+    text-align: center;
+    display: none; /* Hidden by default */
+    position: relative;
+    height: 90vh;
+}
+
+.container.active {
+    display: block; /* Only the active container will show */
+}
+
+.htext {
+    font-size: 1.7em;
+    margin-bottom: 0.5em;
+    background: linear-gradient(to right, rgba(241, 244, 247, 0.74), rgba(195, 155, 231, 0.664));
+    background-clip: text;
+    color: transparent;
+}
+
+.text2 {
+    font-size: 0.9em;
+    margin-bottom: 1.5em;
+}
+
+input {
+    display: block;
+    width: 100%;
+    padding: 1em;
+    margin: 1.5em 0;
+    border: none;
+    border-radius: 5px;
+    background-color: #f0f0f0;
+}
+
+input[type="checkbox"] {
+    width: auto;
+    display: inline-block;
+    margin-right: 0.5em;
+}
+
+label {
+    font-size: 0.9em;
+}
+
+.submit, .submit2 {
+    display: inline-block;
+    width: 20vw;
+    padding: 1em;
+    border: none;
+    background-color: rgb(7, 7, 94);
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    position: relative;
+    bottom: 20%;
+}
+
+.submit:hover, .submit2:hover {
+    background-color: rgba(197, 193, 193, 0.2);
+    transform: scale(1.05);
+}
+
+/* Buttons for toggling between Login and Register */
+.buttons {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 5%;
+    width: 100%;
+}
+
+button {
+    display: inline-block;
+    width: 10em;
+    padding: 1em;
+    border: none;
+    background-color: rgb(7, 7, 94);
+    color: white;
+    cursor: pointer;
+    text-align: center;
+}
+
+.login {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.register {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+button:active {
+    background-color: rgba(197, 193, 193, 0.2);
+    transform: scale(1.1);
+}
+
+button.active {
+    background-color: rgba(7, 7, 94, 0.8);
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+    background-color: rgba(241, 244, 247, 0.74);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgba(195, 155, 231, 0.664);
+}
+
+/* Media Queries for Responsive Design */
+@media screen and (max-width: 1320px) {
+    input {
+        padding: 1em;
+        margin: .5em
+    }
+}
+
+@media screen and (max-width: 780px) {
+    .container {
+        width: 70vw;
+    }
+
+    .submit, .submit2 {
+        width: 40vw;
+        margin-top: .2em;
+    }
+
+    input {
+        padding: 1em;
+        margin: .5em
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .container {
+        width: 80vw;
+    }
+
+    .submit, .submit2 {
+        width: 40vw;
+        margin-top: 2em;
+    }
+
+    button {
+        width: 8em;
+    }
+    input{
+        padding: 1em;
+        margin: .3em;
+    }
+}
+
+@media screen and (max-width: 390px) {
+    .container {
+        width: 90vw;
+    }
+
+    input {
+        padding: 1em;
+        margin: .5em;
+    }
+
+    button {
+        width: 7em;
+    }
+
+    .submit, .submit2 {
+        width: 50vw;
+        margin-top: .5em;
+    }
+
+    label {
+        font-size: 0.7em;
+    }
+}

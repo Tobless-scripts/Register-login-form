@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register-Login Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="owner">
+    <div class="container active" id="register"> <!-- Register form active by default -->
+      <h1 class="htext">Register, Now</h1>
+      <h2 class="text2">We are so happy to have you</h2>
+      <form action="#" method="post">
+          <input id="name" type="text" name="full_name" placeholder="Full Name" required>
+          <input id="email" type="email" name="email" placeholder="Email" required>
+          <input id="password" type="password" name="password" placeholder="Password" required>
+          <input id="confirm-password" type="password" name="confirm_password" placeholder="Confirm Password" required>
+          <input id="checkBox" type="checkbox" name="terms" required>
+          <label for="checkBox">I agree to the terms & Conditions</label>
+          <button class="submit" type="submit">Register</button>
+      </form>
+    </div>
+    
+    <div class="container" id="login"> <!-- Login form -->
+      <h1 class="htext">Login</h1>
+      <h2 class="text2">Welcome back</h2>
+      <form action="#" method="post">
+          <input id="username" type="text" name="username" placeholder="User Name" required>
+          <input id="email-login" type="email" name="email" placeholder="Email" required>
+          <input id="login-password" type="password" name="password" placeholder="Password" required>
+          <button class="submit2" type="submit">Login</button>
+      </form>
+    </div>
+    
+    <div class="buttons">
+      <button class="login" type="button">Login</button>
+      <button class="register active" type="button">Register</button> <!-- Register button active by default -->
+    </div>
+  </div>
+
+  <script>
+    const loginBtn = document.querySelector('.login');
+    const registerBtn = document.querySelector('.register');
+    const loginForm = document.getElementById('login');
+    const registerForm = document.getElementById('register');
+
+    // Show register form by default
+    registerForm.classList.add('active');
+
+    registerBtn.addEventListener('click', function() {
+        registerForm.classList.add('active');
+        loginForm.classList.remove('active');
+        registerBtn.classList.add('active');
+        loginBtn.classList.remove('active');
+    });
+
+    loginBtn.addEventListener('click', function() {
+        loginForm.classList.add('active');
+        registerForm.classList.remove('active');
+        loginBtn.classList.add('active');
+        registerBtn.classList.remove('active');
+    });
+  </script>
+</body>
+</html>
