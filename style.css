@@ -55,7 +55,7 @@ input {
     display: block;
     width: 100%;
     padding: 1em;
-    margin: 1.5em 0;
+    margin: 1em 0;
     border: none;
     border-radius: 5px;
     background-color: #f0f0f0;
@@ -65,6 +65,16 @@ input[type="checkbox"] {
     width: auto;
     display: inline-block;
     margin-right: 0.5em;
+}
+
+input[type="password"] {
+    width: 90%;
+    display: inline-block;
+}
+
+#loginPassword, #confirm_password, .password{
+    width: 90%;
+    display: inline-block;
 }
 
 label {
@@ -87,6 +97,12 @@ label {
 .submit:hover, .submit2:hover {
     background-color: rgba(197, 193, 193, 0.2);
     transform: scale(1.05);
+}
+
+.eye, .eye2, .eye3{
+    width: 1.5em;
+    display: inline-block;
+    margin-left: 1em;
 }
 
 /* Buttons for toggling between Login and Register */
@@ -140,31 +156,52 @@ button.active {
 /* Media Queries for Responsive Design */
 @media screen and (max-width: 1320px) {
     .container{
-        width: 30em;
+        height: 30em;
     }
     input {
         padding: 1em;
         margin: .5em
     }
+    input[type="password"] {
+        width: 80%;
+        display: inline-block;
+    }
+    
+    #loginPassword, #confirm_password, .password{
+        width: 80%;
+        display: inline-block;
+    }
 }
 
-@media screen and (max-width: 780px) {
+@media screen and (max-width: 850px) {
     .container {
         width: 70vw;
     }
 
     .submit, .submit2 {
         width: 40vw;
-        margin-top: .2em;
+    }
+
+    .buttons{
+        bottom: 3%;
     }
 
     input {
         padding: 1em;
         margin: .5em
     }
+    input[type="password"] {
+        width: 85%;
+        display: inline-block;
+    }
+    
+    #loginPassword, #confirm_password, .password{
+        width: 85%;
+        display: inline-block;
+    }
 }
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 610px) {
     .container {
         width: 80vw;
     }
@@ -181,9 +218,18 @@ button.active {
         padding: 1em;
         margin: .3em;
     }
+    input[type="password"] {
+        width: 85%;
+        display: inline-block;
+    }
+    
+    #loginPassword, #confirm_password, .password{
+        width: 85%;
+        display: inline-block;
+    }
 }
 
-@media screen and (max-width: 390px) {
+@media screen and (max-width: 490px) {
     .container {
         width: 90vw;
     }
@@ -204,5 +250,48 @@ button.active {
 
     label {
         font-size: 0.7em;
+    }
+  
+    input[type="password"] {
+        width: 80%;
+        display: inline-block;
+    }
+    
+    #loginPassword, #confirm_password, .password{
+        width: 80%;
+        display: inline-block;
+    }
+}
+@media screen and (max-width: 375px) {
+    .container {
+        width: 90vw;
+    }
+
+    input {
+        padding: 1em;
+        margin: .5em;
+    }
+
+    button {
+        width: 7em;
+    }
+
+    .submit, .submit2 {
+        width: 50vw;
+        margin-top: .5em;
+    }
+
+    label {
+        font-size: 0.7em;
+    }
+  
+    input[type="password"] {
+        width: 70%;
+        display: inline-block;
+    }
+    
+    #loginPassword, #confirm_password, .password{
+        width: 70%;
+        display: inline-block;
     }
 }
